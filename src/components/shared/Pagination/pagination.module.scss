@@ -1,0 +1,58 @@
+$color_1: black;
+$color_2: #fff;
+$background-color_1: #BEBEBE;
+
+.pagination {
+  text-align: center;
+  margin: 50px;
+
+  span {
+    user-select: none;
+    color: $color_1;
+    background: #fff;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 4px 12px;
+    text-decoration: none;
+    line-height: 1.5em;
+    font-weight: 600;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: $background-color_1;
+      color: $color_2;
+      cursor: pointer;
+    }
+
+    &:active {
+      background: rgba(190, 190, 190, 0.75);
+    }
+  }
+
+  span.active {
+    user-select: none;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 4px 12px;
+    text-decoration: none;
+    line-height: 1.5em;
+    font-weight: 600;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: $color_2;
+    background-color: $background-color_1;
+  }
+}
+
+@media (max-width: 425px) {
+  .pagination {
+    margin: 30px 0 0 0;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,207 @@
+@import '../../../assets/styles/_variables.scss';
+
+.users {
+  margin-top: 30px;
+
+  .user {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+
+    .actions {
+      margin-right: 10px;
+      width: 160px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+
+      .follow {
+        margin-bottom: 10px;
+
+        .followBtn {
+          @extend %default-button;
+
+          width: 160px;
+          height: 30px;
+        }
+      }
+
+      .startChatting {
+        .startChattingBtn {
+          @extend %default-button;
+
+          width: 160px;
+          height: 30px
+        }
+      }
+    }
+
+    .mainPart {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 65%;
+
+      .leftSide {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .userInfo {
+          margin-left: 20px;
+          margin-bottom: 10px;
+          height: 120px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .infoName {
+            margin-top: 15px;
+
+            .profileLink {
+              font-size: 20px;
+              color: black;
+              text-decoration: none;
+              word-break: break-word;
+            }
+          }
+
+          .infoStatus {
+            .status {
+              color: #767676;
+              font-size: 14px;
+              margin: 8px 0 0 8px;
+            }
+          }
+        }
+      }
+
+      .isFollowing {
+        margin: 0 10px 0 20px;
+        color: #767676;
+      }
+
+      .userAvatar {
+        margin-left: 10px;
+
+        .avatarImg {
+          min-width: 100px;
+          height: 100px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .users {
+    .user {
+      margin-bottom:10px;
+
+      .mainPart {
+        width: 100%;
+
+        .userInfo {
+           .infoName {
+             width: 100%;
+           }
+        }
+
+        .isFollowing {
+          margin: 0 5px 0 10px;
+          max-width: 80px;
+        }
+      }
+
+      .actions {
+        flex-direction: row;
+        width: 100%;
+        margin-left: 10px;
+        margin-bottom: 10px;
+
+        .follow {
+          margin: 0 10px 0 0;
+
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .users {
+    margin-top: 0;
+
+    .user {
+      .actions {
+        margin-top: -15px;
+
+        .follow {
+          .followBtn {
+            font-size: 10px;
+            width: 120px;
+            height: 25px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+          }
+        }
+
+        .startChatting {
+          .startChattingBtn {
+            font-size: 10px;
+            width: 120px;
+            height: 25px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+          }
+        }
+      }
+
+      .mainPart {
+        .userAvatar {
+          .avatarImg {
+            min-width: 70px;
+            height: 70px;
+          }
+        }
+
+        .isFollowing {
+          font-size: 12px;
+          width: 60px;
+        }
+
+        .leftSide {
+          .userInfo {
+            .infoName {
+              .profileLink {
+                font-size: 16px;
+              }
+            }
+
+            .infoStatus {
+              .status {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

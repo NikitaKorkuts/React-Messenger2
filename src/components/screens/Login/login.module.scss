@@ -1,0 +1,214 @@
+$color_1: #000;
+$color_2: #6caee0;
+$color_3: #ffffff;
+$color_4: #4e9eda;
+$color_5: #7b9d62;
+$color_6: red;
+$background-color_1: #6caee0;
+$background-color_2: #d6f0c3;
+
+.modalContent {
+  font-size: 18px;
+  padding: 0 90px;
+  white-space: pre-wrap;
+}
+
+.formLogin {
+  max-width: 1000px;
+  width: 100%;
+  margin: 100px auto;
+  font: bold 14px sans-serif;
+  text-align: center;
+}
+.formLogInWithEmail {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 130px;
+  text-align: center;
+  .formRow {
+    text-align: left;
+    margin-bottom: 23px;
+
+    .showModalBtn {
+      margin-bottom: 30px;
+      cursor: pointer;
+      text-align: center;
+      font-weight: 300;
+      font-size: 16px;
+
+      .showModalIcon {
+        display: inline-block;
+        transform: rotate(90deg);
+        margin-left: 10px;
+      }
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+    }
+    >label {
+      p {
+        display: inline-block;
+        box-sizing: border-box;
+        color: $color_1;
+        width: 125px;
+        text-align: right;
+        padding-right: 25px;
+        align-self: flex-start;
+        margin-top: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+  .formTitleRow {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 120px;
+  }
+  h1 {
+    display: inline-block;
+    box-sizing: border-box;
+    color: $color_1;
+    font-size: 24px;
+    padding: 0 30px 15px;
+    border-bottom: 2px solid #6caee0;
+    margin: 0;
+  }
+  input {
+    color: $color_1;
+    box-sizing: border-box;
+    width: 230px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px 18px;
+    border: 1px solid #dbdbdb;
+  }
+  button {
+    display: block;
+    border-radius: 2px;
+    background-color: $background-color_1;
+    color: $color_3;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 15px 35px;
+    border: 0;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+}
+.formRow {
+  .formCheckbox {
+    margin-top: 50px;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 14px;
+      font-weight: normal;
+      text-align: left;
+      margin: 0;
+    }
+
+    input {
+      margin-right: 10px;
+      width: 15px !important;
+      vertical-align: top;
+    }
+
+    .formCheckboxField {
+      width: auto
+    }
+  }
+}
+.formErrorText {
+  color: $color_6;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 900px) {
+  .formLogin {
+    margin: 20px auto;
+  }
+  .formLogInWithEmail {
+    position: relative;
+    display: block;
+    margin: 0 0 50px;
+    .formWhiteBackground {
+      margin: 0 auto 32px;
+    }
+    &:after {
+      bottom: -80px;
+      left: 50%;
+      margin-left: -25px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .modalContent {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .formLogInWithEmail {
+
+    button {
+      font-size: 12px;
+      padding: 15px 25px;
+    }
+
+    .formWhiteBackground {
+      width: 300px;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    .formRow {
+      >label {
+        p {
+          display: block;
+          text-align: left;
+          padding: 0 0 10px;
+        }
+      }
+    }
+    .formEmail {
+      display: block;
+      margin: 0 auto;
+    }
+    .formPassword {
+      display: block;
+      margin: 0 auto;
+    }
+    &:after {
+      bottom: -80px;
+      left: 50%;
+      margin-left: -25px;
+    }
+    .formForgottenPassword {
+      display: block;
+      margin: 5px auto;
+      max-width: 180px;
+    }
+    .formCreateAnAccount {
+      display: block;
+      margin: 5px auto;
+      max-width: 180px;
+    }
+  }
+  .formCheckbox {
+    input {
+      display: inline-block;
+      margin-left: 0;
+    }
+  }
+}

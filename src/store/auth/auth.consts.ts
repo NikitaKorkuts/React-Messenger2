@@ -1,0 +1,4 @@
+export const SET_AUTH_USER_DATA = 'auth/SET_AUTH_USER_DATA';
+export const SET_AUTH_USER_PROFILE = 'auth/SET_AUTH_USER_PROFILE';
+export const SET_AUTH_USER_AVATAR = 'auth/SET_AUTH_USER_AVATAR';
+export const SET_CAPTCHA_URL = 'auth/SET_CAPTCHA_URL';

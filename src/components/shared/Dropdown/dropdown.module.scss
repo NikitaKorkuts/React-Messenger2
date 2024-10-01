@@ -1,0 +1,14 @@
+.dropdown {
+  min-width: 15px;
+  max-width: 200px;
+
+  .menuItems {
+    position: absolute;
+
+    .menuItem {
+      min-width: 120px;
+      max-width: 200px;
+
+    }
+  }
+}

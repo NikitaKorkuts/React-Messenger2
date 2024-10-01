@@ -1,0 +1,35 @@
+@import 'scss-reset/_reset.scss';
+@import './helveticaNeue.font.scss';
+@import '_variables.scss';
+
+html {
+  font-family: 'HelveticaNeueCyr', 'sans-serif';
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+
+main {
+  max-width: 70%;
+  min-width: 320px;
+  margin: 70px auto 0;
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    margin: 40px auto 0;
+  }
+}

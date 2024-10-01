@@ -1,0 +1,219 @@
+.formLogin {
+  max-width: 1000px;
+  width: 100%;
+  margin: 100px auto;
+  font: bold 14px sans-serif;
+  text-align: center;
+}
+
+.formLogInWithEmail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 130px;
+  text-align: center;
+
+  .formRow {
+    text-align: left;
+    margin-bottom: 23px;
+    width: 600px;
+
+    label {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .formTitleRow {
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 120px;
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 24px;
+    padding: 0 30px 15px;
+    border-bottom: 2px solid #6caee0;
+    margin: 0;
+  }
+
+  .formRow > label p {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #000;
+    width: 165px;
+    text-align: right;
+    padding-right: 25px;
+    align-self: flex-start;
+    margin-top: 15px;
+    text-transform: capitalize;
+  }
+
+  input {
+    color: #000;
+    box-sizing: border-box;
+    width: 230px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px 18px;
+    border: 1px solid #000;
+    font-size: 16px;
+  }
+
+  textarea {
+    color: #000;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    font: normal 13px sans-serif;
+    padding: 12px 18px;
+    border: 1px solid #000;
+    resize: vertical;
+    font-size: 16px;
+  }
+}
+
+.formCheckbox {
+  float: left;
+
+  p {
+    padding-right: 0 !important;
+    margin-left: 15px;
+    text-align: right;
+  }
+
+  input {
+    width: auto;
+    height: 20px;
+    vertical-align: top;
+    box-shadow: none;
+  }
+}
+
+.formLogInWithEmail {
+  button {
+    display: block;
+    border-radius: 2px;
+    background-color: #6caee0;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 15px 35px;
+    border: 0;
+    margin: 55px auto 0 230px;
+    cursor: pointer;
+  }
+
+  .formForgottenPassword, .formCreateAnAccount {
+    text-decoration: none;
+    padding: 4px 8px;
+    font-weight: normal;
+  }
+
+  .formForgottenPassword {
+    color: #4e9eda;
+  }
+
+  .formCreateAnAccount {
+    color: #7b9d62;
+    background-color: #d6f0c3;
+  }
+}
+
+.formErrorText {
+  color: red;
+  margin: 30px auto -40px auto;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+
+  .formLogin {
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .formLogInWithEmail {
+    position: relative;
+    display: block;
+    margin: 0 0 50px;
+
+    .formTitleRow {
+      text-align: center;
+      margin: 80px 0 40px 0;
+    }
+
+    .formRow {
+      width: 95%;
+      height: 50px;
+      margin: 0 10px 28px 10px;
+
+      .formCheckbox {
+        margin-top: 13px;
+      }
+
+      button {
+        margin: 0 auto;
+      }
+    }
+
+    .formWhiteBackground {
+      margin: 0 auto 32px;
+    }
+
+    &:after {
+      bottom: -80px;
+      left: 50%;
+      margin-left: -25px;
+    }
+
+  }
+}
+
+@media (max-width: 600px) {
+
+  .formLogInWithEmail {
+    .formWhiteBackground {
+      width: 300px;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    .formEmail, .formPassword {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &:after {
+      bottom: -80px;
+      left: 50%;
+      margin-left: -25px;
+    }
+
+    h1 {
+      font-size: 16px;
+    }
+
+    button {
+      font-size: 12px;
+      padding: 15px 20px;
+    }
+  }
+
+  .formCheckbox {
+    input {
+      display: inline-block;
+      margin-left: 0;
+    }
+
+    span {
+      width: 200px !important;
+    }
+  }
+}

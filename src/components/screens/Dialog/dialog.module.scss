@@ -1,0 +1,271 @@
+.dialog {
+  height: 100vh;
+  margin-top: -7px;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .noMessages {
+    color: #767676;
+    text-align: center;
+    font-size: 18px;
+    height: 60vh;
+  }
+
+  .lastUserActivityDate {
+    position: fixed;
+    text-align: center;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 999;
+
+    span {
+      background: rgba(220,220,220, 0.7);
+      color: #333333;
+      font-size: 15px;
+      padding: 5px 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+  }
+
+  .separationDate{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    p{
+      text-align: center;
+      font-size: 18px;
+      color: #414141;
+      text-transform: capitalize;
+    }
+  }
+
+  .sendMessage {
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+
+    .sendMessageBtn {
+      margin-left: 20px;
+      padding: 15px 25px;
+      height: 60px;
+      font-size: 16px;
+      border: 2px solid lightgrey;
+      color: dimgrey;
+      font-weight: 100;
+    }
+
+    textarea {
+      width: 95%;
+      height: 60px;
+      font-size: 18px;
+      padding: 10px;
+      border: 2px solid lightgrey;
+      outline: none;
+      -moz-appearance: none;
+    }
+  }
+
+  .loaderText {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .infiniteScroll {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    overflow-y: hidden;
+  }
+}
+
+.message {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+
+  &.sameSender {
+    margin-top: -40px;
+  }
+
+  &.left {
+    .avatar {
+      margin-top: 18px;
+    }
+  }
+
+  &.right {
+    float: right;
+    flex-direction: row-reverse;
+
+    .body {
+      .info {
+        .name {
+          float: right;
+          margin-top: -20px;
+        }
+      }
+
+      .messageText {
+        background: rgba(135, 206, 235, 0.3);
+      }
+    }
+  }
+
+  .avatar {
+    min-width: 100px;
+    max-width: 100px;
+    height: 100px;
+    align-self: flex-start;
+
+    img {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .body {
+    .info {
+      .name {
+        font-weight: 600;
+      }
+    }
+
+    .messageText {
+      min-width: 185px;
+      max-width: 600px;
+      position: relative;
+      padding: 20px 32px 32px 20px;
+      margin: 20px;
+      background: rgba(169,169,169, 0.2);
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+
+      .messageTextBody {
+        font-weight: 500;
+        line-height: 25px;
+        word-break: break-word;
+      }
+
+      .date {
+        margin-left: 5px;
+        color: darkgray;
+        position: absolute;
+        bottom: 1px;
+        right: 24px;
+      }
+
+      .deleteIcon {
+        position: absolute;
+        top: 10px;
+        right: 7px;
+        cursor: pointer;
+        fill: darkgrey;
+
+        svg {
+          width: 13px;
+          height: 13px;
+        }
+        
+        .dropdownMenu {
+          position: absolute;
+          z-index: 99999;
+          right: -13px;
+          top: -60px;
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+          background: #fff;
+          padding: 10px 13px;
+          width: 170px;
+          font-size: 15px;
+        }
+      }
+
+      .checkmark {
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+
+        svg {
+          width: 15px;
+          height: 15px;
+
+          &.fill_blue {
+            fill: skyblue;
+          }
+
+          &.fill_gray {
+            fill: darkgray;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .message {
+    padding: 0 5px;
+  }
+
+  .dialog {
+    .sendMessage {
+      width: 97%;
+      margin: 5px;
+
+      .sendMessageBtn {
+        margin: 0;
+        padding: 10px;
+
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .message {
+    .avatar {
+      min-width: 60px;
+      max-width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+
+@media (max-width: 430px) {
+  .dialog {
+    padding-top:8px;
+
+    .sendMessage {
+      textarea {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .lastUserActivityDate {
+      top: 55px;
+    }
+  }
+}
+
+
+

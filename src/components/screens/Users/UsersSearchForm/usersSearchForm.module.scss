@@ -1,0 +1,52 @@
+.usersSearch {
+  position: relative;
+  margin: 100px auto 0 auto;
+  width: 70%;
+  padding: 20px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+
+  .searchIcon {
+    position: absolute;
+    left: 15px;
+    top: 12%;
+    width: 25px;
+    fill: #767676;
+    cursor: pointer;
+  }
+
+  .searchForm {
+    width: 80%;
+    border: none;
+    font-size: 22px;
+    padding: 0 20px 0 40px;
+  }
+
+  .searchOptions {
+    width: 20%;
+    height: 100%;
+    border: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .usersSearch {
+    margin: 60px auto 0 auto;
+    width: 95%;
+    padding: 15px;
+
+    .searchIcon {
+      width: 20px;
+      height: 20px;
+      top: 29%;
+      left: 10px;
+    }
+
+    .searchForm {
+      font-size: 16px;
+    }
+  }
+}

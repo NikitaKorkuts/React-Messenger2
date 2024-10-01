@@ -1,0 +1,230 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #191919;
+  min-height: 20px;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  z-index: 1000;
+  padding: 5px 0;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 70%;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+
+    .active *{
+      fill: orange;
+    }
+
+    .searchIcon {
+      margin-left: 20px;
+      cursor: pointer;
+      width: 27px;
+    }
+
+    .chatIcon {
+      cursor: pointer;
+      width: 27px;
+      margin-left: 27px;
+    }
+
+    a {
+      position: relative;
+
+      .newMessagesCount {
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        bottom: -1px;
+        right: -1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: red;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        .newMessagesCountText {
+          //width: 15px;
+          //height: 15px;
+          //font-size: 12px;
+          //font-weight: 500;
+          //-webkit-border-radius: 50%;
+          //-moz-border-radius: 50%;
+          //border-radius: 50%;
+          //color: white;
+          //background: red;
+          //position: absolute;
+          //text-align: center;
+          //bottom: 0;
+          //right: -3px;
+          font-size: 12px;
+          text-align: center;
+          font-weight: 500;
+          color: white;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .login{
+    color: white;
+    font-weight: 300;
+    padding: 5px 0;
+    text-decoration: none;
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .profileLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+    .dropdownMenuHeader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 140px;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .dropdownMenuItems {
+      padding: 13px 0 3px 0;
+      background: #191919;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+
+      a{
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+        cursor: pointer;
+
+        .dropdownMenuItem {
+          width: 120px;
+          margin: 0 10px;
+          padding: 6px 0;
+        }
+
+        &.active{
+          color: orange;
+          font-weight: 500;
+        }
+
+      }
+    }
+
+    .link{
+      font-size: 17px;
+      color: white;
+      margin: 0;
+    }
+
+    .triangleIcon {
+      width: 9px;
+      height: 9px;
+      margin-left: 6px;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      -webkit-border-radius: 16%;
+      -moz-border-radius: 16%;
+      border-radius: 20%;
+      margin: 0 20px;
+      cursor: pointer
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .wrapper {
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    .wrapper {
+      .login {
+        font-size: 16px;
+      }
+    }
+
+    .profileLink {
+      margin-right: 5px;
+
+      .avatar {
+        display: none;
+      }
+
+      .link {
+        font-size: 13px;
+      }
+
+      .dropdownMenuItems {
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .search {
+      .searchIcon {
+        width: 20px;
+        height: 30px;
+        margin-left: 20px;
+        margin-right: 7px;
+      }
+
+      .chatIcon {
+        width: 20px;
+        height: 30px;
+        margin-left: 7px;
+        margin-right: 7px;
+      }
+
+      a {
+        .newMessagesCount {
+          width: 12px;
+          height: 12px;
+          bottom: 3px;
+          right: 3px;
+
+          .newMessagesCountText {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
